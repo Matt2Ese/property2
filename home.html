@@ -1,992 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>HOME</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="focus.js"></script>
-    <href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main right'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-container > div {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.item1 {
+  grid-area: header;
+  background-color: purple;
+  text-align: center;
+  color: #ffffff;
+}
+
+.item1 > h1 {
+  font-size: 40px;
+}
+
+.item2 {
+  grid-area: menu;
+  }
   
-        <style>
-              *{
-            box-sizing: border-box;
-    }
-        html,body{
-            padding: 0;
-            margin: 0;
-                }
-        header{
-            top: auto;
-            position:relative;
-            }
-         header::after{
-            content: "";
-            clear: both;
-            }
-        body{
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            } 
-        .container{
-            height: auto;
-            padding: 5px;
-            display: flex;
-            max-width: 100%;
-            position:relative;
-            background-image:linear-gradient(rgba(48, 86, 94, 0),#085660);
-        }
-        .container img{
-            position: relative;
-            display: block;
-            margin-bottom: 2px;
-            max-width:100px;
-            float: left;
-            margin-left: 40px;
-            border-radius: 10%;
-            box-shadow: 2px 5px 7px 5px rgb(0, 0,0,0.33),3px 2px 6px 1px rgba(0, 0, 0, 0.22);
-        }
-            .container::after{
-            content: "";
-            clear: both;
-            display: inline-flex;
-                      }
-        .c-name{
-            display: block;
-            position:fixed;
-            margin: 3px;
-            margin-left: 27%;
-            padding: auto;
-        }
-        .c-name p{
-            text-decoration: none;
-            text-align: center;
-             color: #006b42;
-              text-emphasis: none;
-              font-size: 1.7rem;
-        }
-    nav{
-    display: inline-flex;
-    position: absolute;
-    margin-top:3cap;
-    float: right;
-    max-width: 61vi;
-    height: auto;
-    padding: 5px;
-    margin-left:50vmax;
-}
-nav ol{
-    min-width: 30vmin;
-    list-style-type: none;
-}
-nav ol>li{
-    color: rgb(52, 118, 118);
-    display: inline-flex;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    border: 1px solid rgb(218, 141, 154);
-    padding: 5px;
-    transition-duration: 1s;
-    transition-timing-function: ease-in;
+.item2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ol>li:last-child{
-    margin-right: 10px;
-}
-.nav_bar a{
-    color:rgb(83, 5, 5);
-    text-decoration: none;
-    transition-duration: 0.4s;
-}
-.nav_bar a.active{
-    color: #05452c;
-    border: none;
-}
-.nav_bar li:hover{
-    background: rgb(227, 195, 195);
-}
-.nav_bar a:hover{
-    color:#186a85
-}
-.nav-item{
-  visibility: hidden;
-}
-main{
-    min-height:60vh;
-   
-    top:5pt;
-    position:relative;
-    background: #00a6de;
-    padding: 0.5vi;
-    word-wrap: break-word;
-}
-.house{
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-    background:rgb(142, 139, 139);
-    border: 3px solid;  
-    border-width: 3px;
-    width: 50vh;
-    margin: 3px;
-    border-image:linear-gradient(to right,rgb(178, 218, 245),rgb(58, 109, 141))1;   
-}
-#pages{
-    padding: 5px;
-    display: flex;
-    width:100%;
-    overflow: visible;
-    resize: none;
-}
-#pages::after{
-    content: "";
-    clear: both;
-    display:flex;
-    resize: none;
+.item2 li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
 }
 
-#pages>ul>li:nth-child(odd){
-    color:#006b42;
-    font-size:0.9em;
+.item2 li:hover {
+  background-color: #0099cc;
 }
-#pages>ul>li:last-child{
-    color:rgb(255, 0, 0);
-}
-#pages >ul{
-    list-style-type: none;
-    word-wrap: break-word;
-    overflow: hidden;
-}
-#pages>ul>li{
-    color:rgb(0, 0, 0)
-}
-#pages>ul{
-    color: rgb(2, 18, 18);
-    font-size: 24px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-#pages img{
-    transform-origin: 2s;
-    transition-timing-function: ease-in;
-    float: right;
-    margin: 1px;
-    padding: 10px;
-    box-shadow: 1px 1px 0px 1px rgb(253, 250, 250), 2px 1px 12px 2px rgb(253, 246, 246);
-    }
-#pages #carouselImage img{
-    max-width: 25vw;
-    clear: both;
-    background: #0d1a05;
-    resize: none;
+  
+.item3 {
+  grid-area: main;
 }
 
-#pages #carouselImage .carousel-inner{
-    max-width: 70vi;;
+.item3 > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
 }
-#pages #carousel_Image::after{
-    content: "";
-    display: block;
-    clear: both;
+
+.item3 > p {
+  margin-bottom: 7px;
 }
-#pages #carousel_Image img{
-    clear: both;
-    max-height:50%;
-    background: #0d1a05;
-    max-width:100%;
-    resize: none;
+
+.item4 {
+  grid-area: right;
+  border: 2px solid #0099cc;
+  background-color: white;
+  padding: 15px;
+  color: #000000;
 }
-#pages #carousel_Image .carousel-inner{
-    max-width: 70vi;
 
+.item4 > h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
 }
-#pages #carousel_Image button::after{
-    content: "";
-    resize: none;
-    clear: both;
+
+.item4 li {
+  padding: 5px;
+  margin-bottom: 5px;
 }
-.carousel-control-prev-icon {
-   position: relative;
-    bottom: 12vh;
-    display: flex;
-    width: 20vw;
-    left:20px;
+
+.item5 {
+  grid-area: footer;
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
 }
-.carousel-control-next-icon {
-   position: relative;
-    bottom: 12vh;
-    display: flex;
-    width: 20vw;
-    right:20px;
-} 
-.btn-primary{
-    position: relative;
-   writing-mode: sideways-lr;
-   display:inline-flex; 
-   width: 20px;
-   max-height: 100px;
-   padding: 3px;
+
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
 }
-.btn-primary p{
-     clear: both;
-    position: relative;
-    padding: 0px;
-    color: rgb(226, 212, 212);
-    font-size: 16px;
-    text-orientation: upright;
-    text-decoration: none;
-    position: relative;
-    right: 25px;
+
+@media only screen and (min-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 3 / span 6;}
+  .item5 {grid-area: 4 / span 6;}
 }
-        /*grid view columns*/
-        .col-1{width:8.33333333%}
-        .col-2{width:16.66666667%}
-        .col-3{width: 25%}
-        .col-4{width:31.33333333%}
-        .col-5{width:41.66666667%}
-        .col-6{width:50%}
-        .col-7{width:58.33333333%}
-        .col-8{width:66.66666667%}
-        .col-9{width:75%}
-        .col-10{width:83.33333333%}
-        .col-11{width:91.66666667%}
-        .col-12{width:100%}
 
-        [class*="col-"]{
-            float: left;
-            border-right:1px solid black;
-        }
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
+}
 
-         footer{
-            margin-top: 8px;
-            background: #2d3c46;
-            height: auto;
-            color: rgb(211, 151, 74);
-        }
-        /**social icons**/
-        .fa{
-            position: relative;
-            display: inline-flex;
-            padding: 6px;
-            text-align: center;
-            border-radius: 2cap;
-            margin: 10px;
-            font-size: 24px;
-            text-decoration: none;
-        }
-        .fa::hover{
-           opacity: 0.2;
-        }
-        .fa-facebook{
-            background: #1877F2;
-            color:white
-        }
-        .fa-youtube{
-            color:#ff0000;
-        }
-        .fa-instagram{
-         background-image: repeating-linear-gradient(10deg, #f9ce34 35%,#ee2a7b 40%,#6228d7 25%);
-        }
-        .contacts .fa{
-            padding: 2px;
-            font-size: 16px;
-        }
-
-      #footer{
-            width: 100%;
-            height: auto;
-        }
-        #footer::after{
-            content: "";
-            display: block;
-            clear: both;
-        }
-/**media queries max width 1120**/      
- @media screen and (max-width:1120px) {
-             nav{
-                display: inline-block;
-                position: absolute;
-                margin-top:4cap;
-                float: right;
-                right:0px;
-                min-width: 40vi;
-                height: auto;
-                 margin-left: 30%;
-                 }
-            nav ol{
-                min-width: 30%;
-                list-style-type: none;
-                }
-            nav ol>li{
-                color: rgb(52, 118, 118);
-                display: inline;
-                font-family:Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 16px;
-                border-bottom: 2px solid rgb(35, 30, 30);
-                }
-                /**body**/
-           main{
-                top:5pt;
-                position:relative;
-                background: #121b1e;
-                padding: 0.2vi;
-                flex: auto;
-                height: auto;
-                word-wrap: break-word;
-                }
-            .house{
-                word-wrap: break-word;
-                text-align:center;
-                float: left; 
-                }
-            #pages>ul>li{
-                font-size: 12px;
-            }
-            .text>input[type=text]{
-                width: 30vh;
-                font-size: 14px;
-                float: left;
-                                }
-            #img_width{
-                display: inline-flex;
-
-                    }
-            .carousel-control-prev-icon {
-                position: relative;
-                bottom: 15vh;
-                display: inline-flex;
-                width: 20vw;
-                left:2vi;
-                                    }
-            .carousel-control-next-icon {
-                position: relative;
-                bottom: 15vh;
-                display: inline-flex;
-                width: 20vw;
-                 right:2vi;
-            }      
-        }
-
- @media screen and (max-width:650px) {
-      .c-name{
-            display: inline-flex;
-            position:fixed;
-            margin: 3px auto;
-            margin-left: 37%;
-            padding: 3px;
-            }
-        .c-name p{
-            text-decoration: none;
-            text-align: center;
-            color: #006b42;
-            text-emphasis: none;
-            font-size: 1.2rem;
-                }
-         main{
-                position: relative;
-                word-wrap: break-word;
-                display:flex;
-                height: auto;
-                top:0.8cap ;
-                background: rgb(2, 146, 186);
-            }
-        .house{
-                word-wrap: break-word;
-                text-align:center;
-                float: left;   
-            }
-        #pages>ul>li{
-                font-size: 14px;
-                }
-        .images{
-                display: flex;
-                flex-direction: column;
-                max-width: fit-content;
-                width: 40%;  
-                height: auto;
-                }
-        #pages img{
-                    display: inline-flexbox;
-                    float: right;
-                }
-        #pages #carouselImage img{
-                max-width: 40vw;
-                clear: both;
-                background: #0d1a05;
-                resize: none;
-                position: relative;
-                }
-        #pages #carouselImage .carousel-inner{
-                min-width: 17vi;;
-                }
-        #pages #carousel_Image::after{
-                content: "";
-                display: block;
-                clear: both;
-                }
-        #pages #carousel_Image img{
-                position: relative;
-                clear: both;
-                max-height:50%;
-                background: #0d1a05;
-                max-width:43vw;
-                resize: none;
-                }
-        #pages #carousel_Image .carousel-inner{
-                max-width: 80vi;
-                }
-        .carousel-control-prev-icon {
-                position: relative;
-                bottom: 5vh;
-                display: inline-flex;
-                width: 20vw;
-                left:2vi;
-                }
-        .carousel-control-next-icon {
-                position: relative;
-                bottom: 5vh;
-                display: inline-flex;
-                width: 20vw;
-                right:2vi;
-                }
-        nav{
-                padding: 2px;
-                right:3px;
-                margin-left: 0px;
-                top:0;
-            }
-        .nav_bar>ol{
-                padding: 0px;
-                margin: 5px;
-                }
-        .nav_bar>ol>li{
-                position:relative;
-                color: #2e6805;
-                display:inline-flex;
-                border-style: none;
-                padding-left: 1px;
-                margin-right: 3px;
-                border-bottom: 1px solid rgb(3, 116, 157);
-                text-align: center;
-                transition-duration: 2s;
-            }
-        .nav_bar a{
-                font-size: 14px; 
-            }
-        .house{
-                width: 100%;
-                display: flex;
-            }
-        #pages{
-                display: inline-flex;
-
-            }
-        }
-
-        @media only screen and (max-width:600px){
-        .container img{
-            position: relative;
-            display: block;
-            margin-bottom: 1.5vh;
-            max-width:30vw;
-            float: left;
-            margin-left: 4vi;
-            border-radius: 10%;
-            box-shadow: 2px 5px 7px 5px rgb(0, 0,0,0.33),3px 2px 6px 1px rgba(0, 0, 0, 0.22);
-                        }
-        .c-name{
-             display: none;
-             clear: both;
-             position: absolute;
-                }
-        nav{
-                clear: both;
-                left:2cap;
-                display: flex;
-                position:absolute;
-                margin-top: 5px;
-                padding:  20px;
-                float: left;
-                height: auto;
-                }
-        nav ol>li{
-                font-family:Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 18px;
-                margin-bottom: 20px;
-                border-style: none;
-                padding: 0;
-                margin: 0;
-                text-decoration: none;
-                height: auto;
-                bottom: 5vh;
-                }
-        .nav-big{
-                visibility: hidden;
-                    }
-        .nav-item{
-               visibility: visible;
-               clear: both;
-               position: relative;
-               background: white;
-               width: 0;
-               height: 0;
-                    }
-        .dropdown .nav-link{
-                color: #0e171a;
-                transition-duration: 3s;
-                transition-timing-function: ease-in;
-                transition: 2s;
-                            }
-        .dropdown .nav-link:hover{
-                color: rgb(243, 191, 7);
-                font-size: 18px;
-                             }
-        .dropdown-menu{
-                background: #3d4142;
-            }   
-        .dropdown-menu .dropdown-item{
-                color:#d6e3e8
-            }            
-        main {
-            clear:both;
-            top:20vh;
-            position:relative;
-            background: #42484a;
-            padding: 0.2vi;
-            display:flex;
-            word-wrap: break-word;
-            }
-        .container{
-            position:absolute;
-            height: auto;
-            padding: 2px;
-            display: block;
-           
-                    }
-        .house> #pages{
-                display: block;   
-                position: relative;
-                clear: both;
-                    }
-        #pages img{
-                width: 70%;
-                clear: both;
-                margin-right: 10vi;
-                    }
-        #pages ul>li:first-child{
-                text-align: center;
-                                    }
-        #pages >ul{
-            list-style-type: none;
-            word-wrap: break-word;
-            overflow: hidden;
-                    }
-        #pages ul>li{
-                position: relative;
-                margin-top:1vh;
-                text-align: center;
-                        }
-        #pages #carouselImage img{
-                max-width: 70vw;
-                clear: both;
-                background: #404140;
-                resize: none;
-                position: relative;
-                margin-right: 1.7cap;
-                        }
-        #pages #carouselImage .carousel-inner{
-                 min-width: 70vi;;
-                    }
-        #pages #carousel_Image::after{
-                content: "";
-                display: block;
-                clear: both;
-                }
-        #pages #carousel_Image img{
-                position: relative;
-                clear: both;
-                max-height:50%;
-                background: #404140;
-                max-width:100%;
-                resize: none;
-                left: 1.7cap;
-                }
-        #pages #carousel_Image .carousel-inner{
-                max-width: 70vi;
-                }
-        .carousel-control-prev-icon {
-                position: relative;
-                top: 1vh;
-                display: inline-flex;
-                width: 20vw;
-                left:20vi;
-                }
-        .carousel-control-next-icon {
-                position: relative;
-                top: 1vh;
-                display: inline-flex;
-                width: 20vw;
-                right:23vi;
-                }
-        .btn-primary{
-                background:none;
-                border-style: none;
-                position: relative;
-                writing-mode:horizontal-tb ;
-                display:inline-flex; 
-                width: 20px;
-                max-height: 100px;
-                padding: 3px;
-                }
-        .btn-primary p{
-                clear: both;
-                position: relative;
-                padding: 0px;
-                box-shadow: 1px 1px 3px 4px rgb(88, 86, 86), 2px 3px 6px 1px rgb(76, 70, 70);
-                color: rgb(192, 180, 180);
-                font-size: 16px;
-                text-orientation:;
-                text-decoration: none;
-                position: relative;
-                right: 25px;
-                }
-        .btn-primary{
-                    background: none;
-                    border-style: none;
-                    }
-        .btn-primary p:hover{
-                color:white;
-                }
-        footer{
-            margin-top: 0.5cap;
-            background: #2d3c46;
-            height: auto;
-            padding: 5px;
-            color: rgb(211, 151, 74);
-        }
-        #footer{
-            width: 100%;
-            height: auto;
-        }
-        #footer::after{
-            content: "";
-            display: block;
-            clear: both;
-        }
-        .col-6 .contacts{
-            display: inline-flex;
-            width: 100%;
-            position: relative;
-            height: auto;
-        }
-        .contacts .fa{
-            font-size: 15px;
-            text-decoration: none;
-            max-width: 100%;
-            margin :5px 20px 6px 10px;
-            float: right;
-        }
-        .fa-phone{
-            width: 100%;
-        }
-        .fa-phone:hover,.fa-phone:focus{
-            color: white;
-        }
-        .col-6 .social{
-    
-            position: relative;
-            width: 100%;
-            display:block;
-
-        }
-        .social .fa{
-            height: auto;
-            max-width: 100%;
-        }
-        }
-            </style>
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-           <img src="/images/ELGAPE.jpg" alt="logo_image" class="img-thumbnail">
-           <!--company name-->
-     <div class="c-name"><p>EL GAPE PROPERTY LTD</p></div>
-<!--nav bar -->
-    <nav class="nav_bar">
-        <ol class="nav-big">
-            <li><a class="active" href="http://127.0.0.1:3000/.vscode/test/home.html">Home</a></li>
-            <li><a href="http://127.0.0.1:3000/.vscode/test/land.html">Land</a></li>
-            <li><a href="http://127.0.0.1:3000/.vscode/test/house.html">House</a></li>
-            <li><a href="http://127.0.0.1:3000/.vscode/test/contact.html">Contact</a></li>
-        </ol>
-        <!--navbar for phones responsive-->
-        <ol class="nav nav-pills">
-           <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">MENU</a>
-            <ol class="dropdown-menu">
-             <li><a class="dropdown-item" class="active" href="http://127.0.0.1:3000/.vscode/test/home.html">Home</a></li>
-             <li><a class="dropdown-item" href="http://127.0.0.1:3000/.vscode/test/land.html">Land</a></li>
-             <li><a class="dropdown-item" href="http://127.0.0.1:3000/.vscode/test/house.html">House</a></li>
-             <li><a class="dropdown-item" href="http://127.0.0.1:3000/.vscode/test/contact.html">Contact</a></li>
-        
-            </ol>
-            </li>
-        </ol>
-    </nav>
-    </div>
-       
-    </header>
-      </style>
-</head>
-<body>
- <main>
-        <div class="images" id="pages">
-            <div class="house">
-            <div id="pages">
-                <!--start of carousel-->
-                <div id="carouselImage" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                                <img src="/image/road_house.jpg" alt="Fedha">
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_front.jpg" alt="mansiontte"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_front1.jpg" alt="mansiontte"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_door.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_sitting.jpg" alt="kenya"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_sitting2.jpg" alt="Embakasi"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_dining.jpg" alt="mansionette"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_kitchen.jpg" alt="Tassia"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/joint_.jpg" alt="mansionette"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/stairs_mansionette.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_top.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow.jpg" alt="Bungalow"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_front.jpg" alt="Bungalow Embakasi"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_main.jpg" alt="Airport"> 
-                        </div>
-    
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_kitchen.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_balcony.jpg" alt="balcony"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_masters.jpg" alt="Fedha"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_sitting.jpg" alt="Embakasi"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_dining.jpg" alt="Tassia"> 
-                        </div>
 
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselImage" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselImage" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-               <!--information-->
-                <ul>
-                    <li>location:Embakasi,Tassia</li>
-                    <li>Description<span>:Two houses on sale at Embakasi Tassia behind quikmart 5 bderoom mansiontte and a 3 bedroom bungalow. <em>sold by owner</em></span></li>
-                    <li>SIZE:Plot size 50 X 80</li>
-                    <li>price:65,000,000</li>
-                </ul>
-                <!--button more information-->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-               <p>More info</p> 
-            </button>
-            <!--carousel model-->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="staticBackdropLabel">PROPERTY KENYA, EMBAKASI</h3>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                        </div>
-                        <div class="modal-body">
-                             <div id="carousel_Image" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                        <div class="carousel-item active">
-                                <img src="/image/road_house.jpg" alt="Fedha">
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_front.jpg" alt="mansiontte"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_front1.jpg" alt="mansiontte"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_door.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_sitting.jpg" alt="kenya"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_sitting2.jpg" alt="Embakasi"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_dining.jpg" alt="mansionette"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_kitchen.jpg" alt="Tassia"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/joint_.jpg" alt="mansionette"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/stairs_mansionette.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_top.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow.jpg" alt="Bungalow"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_front.jpg" alt="Bungalow Embakasi"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_main.jpg" alt="Airport"> 
-                        </div>
-                         <div class="carousel-item">
-                             <img src="/image/bungalow_kitSitting.jpg" alt="balcony"> 
-                        </div>
+<div class="grid-container">
 
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_kitchen.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_balcony.jpg" alt="balcony"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_masters.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_sitting.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/bungalow_dining.jpg" alt="yard"> 
-                        </div>                        
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_Image" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carousel_Image" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                         </div>
-                        </div>
-                        <div class="mb3">
-                            <label for="message-text" class="col-form-label">Location</label>
-                        
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6517.328432291727!2d36.88685833127778!3d-1.307526784347388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f13b45808f83f%3A0xed689e0502c31c40!2sTassia%2C%20Nairobi!5e0!3m2!1ssw!2ske!4v1749827569851!5m2!1ssw!2ske" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-            <div class="house">
-            <div id="pages">
-                <div id="carousel_Image" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                                 <img src="/image/bungalow_sitting.jpg" alt="front"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/mansionette_kitchen.jpg" alt="yard"> 
-                        </div>
-                        <div class="carousel-item">
-                             <img src="/image/joint_.jpg" alt="yard"> 
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_Image" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carousel_Image" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <!--information-->
-                <ul>
-                    <li>location: vihiga county</li>
-                    <li>description:0.02 ha plot in vihiga county chavakali location. With singles for sale by owner</li>
-                    <li>size</li>
-                    <li>price</li>
-                </ul>
-            </div>
-            </div>
-        </div>
-        <!--lightbox modal here with carousel-->
+  <div class="item1"><h1>Chania</h1></div>
 
-    </main>
-        
-<footer>
-    <div id="footer">
-   
-<div class="col-6">
- <div class="contacts">
-   <ul>
-    <li class="fa fa-phone"> +254 797-566-655</li>
-    <li class="fa fa-phone">+254 704-764-778</li>
-   </ul>
-</div>
+  <div class="item2">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
 </div>
 
-<div class="col-6">
-    <div class="social">
-       <!--socials-->
-       <a href="#" class="fa fa-facebook"></a>
-       <a href="#" class="fa fa-instagram"></a>
-       <a href="#" class="fa fa-youtube"></a>
-    </div>
-    </div>
-    </div>
+  <div class="item3">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete.</p>
+    <p>The city can be divided in two parts, the old town and the modern city. The old town is situated next to the old harbour and is the matrix around which the whole urban area was developed.</p>
+    <p>Chania lies along the north west coast of the island Crete.</p>
+  </div>  
+
+  <div class="item4">
+    <h2>Facts:</h2>
+    <ul>
+      <li>Chania is a city on the island of Crete</li>
+      <li>Crete is a Greek island in the Mediterranean Sea</li>
+    </ul>
+  </div>
+
+  <div class="item5"><p>Resize the browser window to see how the content respond to the resizing.</p></div>
+  
 </div>
-</footer>
-   
+
 </body>
 </html>
+
+
+
+           
+ 
